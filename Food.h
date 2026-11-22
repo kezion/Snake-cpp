@@ -1,13 +1,21 @@
-//
-// Created by kajte on 14.11.2026.
-//
-
-#ifndef SNAKE_FOOD_H
-#define SNAKE_FOOD_H
+#pragma once
+#include "Point.h"
 
 
 class Food {
+protected:
+    Point pozycja;
+public:
+    Food(Point poz);
+    virtual ~Food() = default;
+
+    Point getPozycja() const;
+    void setPozycja(Point poz);
+
+    virtual char getSymbol(const Point& snakeHead) const=0;
+    virtual int getPoints() const=0;
+    virtual bool czyTrujace() const;
+    virtual void update();
+    virtual bool czyWygaslo() const;
+
 };
-
-
-#endif //SNAKE_FOOD_H

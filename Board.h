@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include "Point.h"
+#include "Food.h"
 
 class Board {
 private:
@@ -13,6 +14,6 @@ public:
 
     bool pozaBoard(const Point& p) const;
 
-    void tworzenie(int wynik, const Point& head, const vector<Point>& body,const Point& food) const;
+    void tworzenie(int wynik, const Point& head, const vector<Point>& body,const Food& food) const;
 
 };

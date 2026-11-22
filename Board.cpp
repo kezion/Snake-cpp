@@ -17,7 +17,7 @@ int Board::getWysokosc() const {
 bool Board::pozaBoard(const Point& p) const {
     return p.getX()<0 || p.getX() >= szerokosc || p.getY()<0 || p.getY() >= wysokosc;
 }
-void Board::tworzenie(int wynik, const Point& head, const vector<Point>& body,const Point& food) const {
+void Board::tworzenie(int wynik, const Point& head, const vector<Point>& body,const Food& food) const {
     system("cls");
 
     cout << "============================\n";
@@ -38,8 +38,8 @@ void Board::tworzenie(int wynik, const Point& head, const vector<Point>& body,co
             if (chwilowy==head) {
                 cout << "0";
             }
-            else if (chwilowy==food) {
-                cout << "*";
+            else if (chwilowy==food.getPozycja()) {
+                cout << food.getSymbol(head);
             }
             else {
                 bool jestWaz = false;
