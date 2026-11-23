@@ -1,9 +1,12 @@
 #include "Board.h"
-
+#include <stdexcept>
 
 Board::Board(int s1, int w1) {
-    szerokosc =s1;
-    wysokosc =w1;
+    if (s1 < 5 || w1 < 5) {
+        throw invalid_argument("Wymiary planszy musza wynosic minimum 5x5.");
+    }
+    szerokosc = s1;
+    wysokosc = w1;
 }
 
 int Board::getSzerokosc() const {
