@@ -19,7 +19,7 @@ class toxicFood : public Food {
 private:
     int movesLeft;
 public:
-    toxicFood(Point poz, int duration=10);
+    toxicFood(Point poz, int duration=25);
     char getSymbol(const Point& snakeHead) const override;
     int getPoints() const override;
     bool czyTrujace() const override;

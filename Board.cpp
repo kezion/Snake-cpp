@@ -1,5 +1,5 @@
 #include "Board.h"
-#include <cstdlib>
+
 
 Board::Board(int s1, int w1) {
     szerokosc =s1;
@@ -18,7 +18,7 @@ bool Board::pozaBoard(const Point& p) const {
     return p.getX()<0 || p.getX() >= szerokosc || p.getY()<0 || p.getY() >= wysokosc;
 }
 void Board::tworzenie(int wynik, const Point& head, const vector<Point>& body,const Food& food) const {
-    system("cls");
+    cout << "\033[H";
 
     cout << "============================\n";
     cout << "   Wynik: " << wynik << "  Dlugosc: " << body.size()+1 << "\n";

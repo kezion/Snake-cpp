@@ -13,4 +13,6 @@ add_executable(Snake main.cpp
         Food.cpp
         Food.h
         FoodType.cpp
-        FoodType.h)
+        FoodType.h
+        game.cpp
+        game.h)
